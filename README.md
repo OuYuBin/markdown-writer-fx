@@ -3,7 +3,7 @@
 Markdown Writer FX
 ==================
 
-An open source [Markdown] editor written in JavaFX 8.
+An open source [Markdown] editor written in JavaFX.
 
 ![Markdown Writer FX Screenshot](images/screenshot.png)
 
@@ -34,8 +34,7 @@ TODO
 Requirements
 ------------
 
-Java 8u40 or later is required.
-Java 8u131 or later is recommended.
+Java 9 or later is required.
 
 Installation
 ------------

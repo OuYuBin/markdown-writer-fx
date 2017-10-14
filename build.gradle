@@ -20,10 +20,10 @@ dependencies {
 
 //	compile 'org.fxmisc.richtext:richtextfx:0.7-M3'
 	compile 'com.miglayout:miglayout-javafx:5.0'
-	compile 'de.jensd:fontawesomefx-fontawesome:4.7.0-5'
-	compile 'org.controlsfx:controlsfx:8.40.14'
+	compile 'de.jensd:fontawesomefx-fontawesome:4.7.0-9'
+	compile 'org.controlsfx:controlsfx:9.0.0'
 	compile 'org.fxmisc.cssfx:cssfx:1.0.0'
-	compile 'org.apache.commons:commons-lang3:3.5'
+	compile 'org.apache.commons:commons-lang3:3.6'
 
 	def flexmarkVersion = '0.27.0'
 	compile 'com.vladsch.flexmark:flexmark:' + flexmarkVersion
@@ -52,8 +52,8 @@ dependencies {
 	testCompile 'junit:junit:4.12'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 9
+targetCompatibility = 9
 
 // for RichTextFX submodule
 sourceSets {
