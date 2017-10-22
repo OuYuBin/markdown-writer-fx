@@ -1,5 +1,9 @@
 language: java
 
+script:
+  - ./gradlew assemble
+  - ./gradlew check
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -9,7 +13,7 @@ cache:
     - $HOME/.gradle/wrapper/
 
 before_install:
-  - gradle --version
+  - ./gradlew --version
   - java -version
 
 matrix:
@@ -18,9 +22,3 @@ matrix:
       group: edge
       jdk: oraclejdk9
       sudo: false
-      addons:
-        apt:
-          packages:
-            - oracle-java9-installer
-
-
