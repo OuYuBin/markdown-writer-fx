@@ -91,6 +91,7 @@ public class MarkdownEditorPane
 	public MarkdownEditorPane() {
 		textArea = new MarkdownTextArea();
 		textArea.setWrapText(true);
+		textArea.setUseInitialStyleForInsertion(true);
 		textArea.getStyleClass().add("markdown-editor");
 		textArea.getStylesheets().add("org/markdownwriterfx/editor/MarkdownEditor.css");
 		textArea.getStylesheets().add("org/markdownwriterfx/prism.css");
@@ -224,7 +225,8 @@ public class MarkdownEditorPane
 		textArea.replaceText(markdown);
 
 		// restore old selection range and scrollY
-		textArea.selectRange(oldSelection.getStart(), oldSelection.getEnd());
+        int newLength = textArea.getLength();
+        textArea.selectRange(Math.min(oldSelection.getStart(), newLength), Math.min(oldSelection.getEnd(), newLength));
 		Platform.runLater(() -> {
 			textArea.estimatedScrollYProperty().setValue(oldScrollY);
 		});
